@@ -23,8 +23,9 @@ jobs:
         run: |
           sudo apt install libtool-bin intltool autoconf-archive
           # install make 4.3 to get grouped targets functionality
-          curl http://archive.ubuntu.com/ubuntu/pool/main/m/make-dfsg/make_4.3-4ubuntu1_amd64.deb -OL
-          sudo dpkg -i make_4.3-4ubuntu1_amd64.deb
+          sudo apt update
+          sudo apt install build-essentials
+          make --version
 
       - name: Cache multiple paths
         uses: actions/cache@v2
