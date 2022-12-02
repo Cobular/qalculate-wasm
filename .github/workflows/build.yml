@@ -24,7 +24,8 @@ jobs:
           sudo apt install libtool-bin intltool autoconf-archive
           # install make 4.3 to get grouped targets functionality
           sudo apt update
-          sudo apt install build-essentials
+          # Install build-essential
+          sudo apt install build-essential
           make --version
 
       - name: Cache multiple paths
